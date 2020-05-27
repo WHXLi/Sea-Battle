@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <top>
+        <HBox BorderPane.alignment="TOP_CENTER">
+            <Label fx:id="nameLabel" styleClass="nameField" text="Введите ваше имя: "/>
+            <TextField fx:id="nameText" styleClass="nameField" HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </top>
+    <bottom>
+        <VBox>
+            <Button fx:id="PVEButton" styleClass="gameStartBtn" onAction="#startPVE" prefWidth="Infinity"
+                    text="Игра против ИИ"/>
+            <Button fx:id="PVPButton" styleClass="gameStartBtn" onAction="#startPVP" prefWidth="Infinity"
+                    text="Игра онлайн"/>
+        </VBox>
+    </bottom>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</BorderPane>

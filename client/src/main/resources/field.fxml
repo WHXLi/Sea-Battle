@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="FieldController"
+      prefHeight="400.0" prefWidth="600.0">
+    <Label fx:id="enemyLabel" alignment="CENTER"/>
+    <GridPane fx:id="enemyGrid">
+
+    </GridPane>
+    <Label fx:id="myLabel" alignment="CENTER"/>
+    <GridPane fx:id="myGrid">
+
+    </GridPane>
+</HBox>

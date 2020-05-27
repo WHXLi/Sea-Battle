@@ -1,0 +1,14 @@
+.nameField{
+    -fx-min-height: 50;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+    -fx-background-color: transparent;
+    -fx-font-size: 18;
+    -fx-padding: 0 0 0 10;
+}
+.gameStartBtn{
+    -fx-min-height: 180;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+    -fx-font-size: 18;
+}
