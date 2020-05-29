@@ -36,6 +36,7 @@ public class Controller {
                  DataOutputStream outputStream = new DataOutputStream(socket.getOutputStream())) {
                 outputStream.writeUTF("/connected");
                 while (true) {
+                    exit(socket,outputStream);
                     String message = inputStream.readUTF();
                     if (message.equals("/end")) {
                         break;

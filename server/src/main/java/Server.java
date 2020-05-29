@@ -1,7 +1,9 @@
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.logging.*;
@@ -10,6 +12,7 @@ public class Server {
     public static final Logger LOGGER = Logger.getLogger(Server.class.getName());
     public static Handler handler;
     static private final int PORT = 19199;
+    static private InetAddress clientIP;
 
     public Server() {
         Thread serverWork = new Thread(() -> {
@@ -29,11 +32,15 @@ public class Server {
                     }
                     if (message.equals("/end")) {
                         outputStream.writeUTF("/end");
-                        LOGGER.log(Level.INFO,"Клиент отключен: " + socket.getInetAddress());
+                        clientIP = socket.getInetAddress();
+                        throw new RuntimeException();
                     }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
+            }
+            catch (RuntimeException e){
+                LOGGER.log(Level.INFO,"Клиент отключен: " + clientIP);
             }
         });
         serverWork.start();
