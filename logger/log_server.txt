@@ -1,6 +1,8 @@
-мая 29, 2020 7:58:36 PM Server lambda$new$0
+мая 30, 2020 6:41:16 PM Server <init>
 INFO: Сервер запущен
-мая 29, 2020 7:58:36 PM Server lambda$new$0
+мая 30, 2020 6:41:25 PM ClientHandler <init>
 INFO: Клиент подключен: /192.168.1.1
-мая 29, 2020 7:58:39 PM Server lambda$new$0
+мая 30, 2020 6:43:08 PM ClientHandler <init>
+INFO: Клиент подключен: /192.168.1.1
+мая 30, 2020 6:43:10 PM ClientHandler <init>
 INFO: Клиент отключен: /192.168.1.1
